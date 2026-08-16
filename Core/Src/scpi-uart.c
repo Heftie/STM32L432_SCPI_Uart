@@ -21,8 +21,8 @@ void SCPI_UART_Init(UART_HandleTypeDef *huart) {
               scpi_input_buffer, SCPI_INPUT_BUFFER_LENGTH,
               scpi_error_queue_data, SCPI_ERROR_QUEUE_SIZE);
 
-    HAL_NVIC_SetPriority(USART2_IRQn, 5, 0);
-    HAL_NVIC_EnableIRQ(USART2_IRQn);
+    /* NVIC priority and IRQ enable for USART2 are configured by
+     * HAL_UART_MspInit() (generated from the .ioc, USART2 global interrupt). */
     HAL_UART_Receive_IT(scpi_huart, &scpi_rx_byte, 1);
 }
 

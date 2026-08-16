@@ -1,9 +1,10 @@
 #
 # Builds the scpi-parser library (https://github.com/j123b567/scpi-parser)
-# vendored as a git submodule under Middlewares/Third_Party/scpi-parser.
+# vendored as a git submodule under ./scpi-parser (kept out of Middlewares/,
+# which STM32CubeMX code generation may wipe and regenerate).
 #
 
-set(SCPI_PARSER_DIR ${CMAKE_SOURCE_DIR}/Middlewares/Third_Party/scpi-parser/libscpi)
+set(SCPI_PARSER_DIR ${CMAKE_SOURCE_DIR}/scpi-parser/libscpi)
 
 add_library(scpi-parser STATIC
     ${SCPI_PARSER_DIR}/src/error.c
