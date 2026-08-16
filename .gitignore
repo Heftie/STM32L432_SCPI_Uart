@@ -53,3 +53,27 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# STM32CubeIDE build output
+Debug/
+Release/
+build/
+cmake-build-*/
+
+# STM32CubeIDE project/workspace files
+.metadata/
+.settings/
+.cproject
+.project
+*.launch
+
+# STM32CubeMX backup files
+*.ioc.bak
+
+# STM32CubeProgrammer / ST-Link logs
+*.log
+
+# Editor/OS
+.vscode/
+*.swp
+.DS_Store

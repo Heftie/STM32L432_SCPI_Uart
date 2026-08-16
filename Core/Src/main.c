@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "scpi-uart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,10 +96,13 @@ int main(void)
   /* Initialize leds */
   BSP_LED_Init(LED_GREEN);
 
+  SCPI_UART_Init(&huart2);
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    SCPI_UART_Process();
 
     /* USER CODE END WHILE */
 

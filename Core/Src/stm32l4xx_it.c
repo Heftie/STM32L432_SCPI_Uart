@@ -200,4 +200,12 @@ void SysTick_Handler(void)
 
 /* USER CODE BEGIN 1 */
 
+/**
+  * @brief This function handles USART2 global interrupt (used by the SCPI UART).
+  */
+void USART2_IRQHandler(void)
+{
+  HAL_UART_IRQHandler(&huart2);
+}
+
 /* USER CODE END 1 */
